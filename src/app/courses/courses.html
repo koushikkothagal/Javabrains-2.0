@@ -1,0 +1,103 @@
+    
+    <div class="container">
+ 
+      <div class="filter-section pull-right">
+        
+      </div>
+      <div>
+        <h1 class="page-header">Courses</h1>
+      </div>
+      
+      <!-- <pre>{{ courses.filter.tags | json }}</pre> -->
+      <div class="row">
+        <div class="col-md-2 course-filters">
+            <p >TOPICS</p>
+            <div  ng-click="courses.topicChanged($event)">
+                
+                
+                <input class="check" id="all" type="checkbox" ng-model="courses.filter.tags['All']" 
+                    ng-true-value="'All'" ng-false-value="''" >
+                <label class="check" for="all">All</label>
+                <input class="check" id="{{ topic.id }}" type="checkbox" ng-repeat-start="topic in courses.topics" ng-model="courses.filter.tags[topic.name]" 
+                    ng-true-value="'{{ topic.name }}'" ng-false-value="''">
+                <label class="check" ng-repeat-end for="{{ topic.id }}">{{ topic.name }}</label>
+                
+            </div>
+            <hr />
+            
+            <p >LEVEL</p>
+            <div clas="col-md-12 filters" >
+                <input class="check" id="beginner" ng-model="courses.filter.level['Beginner']" type="checkbox" >
+                <label class="check" for="beginner">Beginner</label>
+                <input class="check" id="intermediate" ng-model="courses.filter.level['Intermediate']" type="checkbox" >
+                <label class="check" for="intermediate">Intermediate</label>
+                <input class="check" id="advanced" ng-model="courses.filter.level['Advanced']" type="checkbox" >
+                <label class="check" for="advanced">Advanced</label>
+            </div>
+            <hr />
+            
+        </div>    
+        <div class="col-md-10">
+            <div class="col-md-12 animate-repeat" dir-paginate="course in courses.courses | coursefilter: courses.filter | itemsPerPage: 5 "> 
+              <div class="well course-tile">
+                  <div class="media">
+                      <div class="media-left course-thumbnail">
+                        <a href="#">
+                          <img class="media-object" ng-src="{{ course.img }}" alt="...">
+                        </a>
+                      </div>
+                      <div class="media-body">
+                        <h3 class="tile-title">{{course.name}}</h3>
+                        <hr />
+                        <p class="tile-description">{{course.desc}}</p>
+                        
+                        <div class="labels">
+                          <a href="#" ui-sref="courses({'tag': tag})" ng-repeat="tag in course.tags" class="label label-default">{{ tag }}</a>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  
+                  
+                  
+                  
+                <!-- 
+                
+                
+            <div ng-if="topic.courses > 1" class="metadata">
+                  <span class="courses">{{ topic.courses }} COURSES</span>
+                </div>
+                <div ng-if="topic.courses === 1" class="metadata">
+                  <span class="courses">1 COURSE</span>
+                </div>  
+                
+            -->
+    <!--        <div ng-if="topic.duration !== 1" class="metadata">
+                  <span class="hours">{{ topic.duration }} HOURS</span>
+                </div>
+                <div ng-if="topic.duration === 1" class="metadata">
+                  <span class="hours">1 HOUR</span>
+                </div>  -->
+              </div>
+            </div>
+            <div class="row text-center">
+                <dir-pagination-controls></dir-pagination-controls>
+            </div>
+            
+            
+            
+        </div>  
+          
+        
+      </div>
+      
+      
+      
+      
+
+      
+      
+      
+      
+      
+    </div>

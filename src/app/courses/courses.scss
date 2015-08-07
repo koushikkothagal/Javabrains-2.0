@@ -1,0 +1,124 @@
+/* Start topics page */
+
+.course-filters {
+  border-right: 1px solid #AAAAAA;
+  p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: $primary-red;  
+  }
+  
+  .filters {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+   
+   
+}
+
+.course-tile {
+  background-color: white;
+  border-radius: 0;
+  /* box-shadow: 0 3px 2px -2px #555555; */
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+
+  border-bottom: 1px #3498db solid;
+  margin: 5px;
+  position: relative;
+  min-height: 240px;
+  .tile-title {
+    font-size: 20px;
+    margin-top: 5px;
+    color: $primary-red;  
+    font-family: "Montserrat";
+    
+  }
+  hr {
+    margin: 0;
+  }
+  p.tile-description {
+    font-family: "Lato", serif;
+    font-size: 14px;
+    max-width: 90%;
+    color: #666666;
+  }
+  .labels {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    a {
+      margin-right: 5px;
+    }
+  }
+  .metadata {
+    margin-top: 70px;
+    font-family: "Lato", sans-serif;
+    color: $primary-red;
+    
+    .courses {
+      position: absolute;
+      bottom: 15px; 
+      left: 15px;
+    }
+    .hours {
+      position: absolute;
+      bottom: 15px; 
+      right: 15px;
+    }
+  }
+  .course-thumbnail {
+    padding-right: 25px;
+  }
+}
+
+/* Start animations for courses tiles */
+
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+    -webkit-transition:all linear 0.4s;
+    transition:all linear 0.4s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+    opacity:0;
+    max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+    opacity:1;
+    max-height:270px;
+}
+
+/* End animations for courses tiles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End topics page */
+

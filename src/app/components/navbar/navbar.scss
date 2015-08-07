@@ -1,0 +1,21 @@
+.custom-navbar {
+  background-color: $plain-background;
+  border-color: $plain-background;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-top: 10px; /* For boxed page border */
+  .navbar-brand {
+    letter-spacing: 0em;
+  }
+}
+
+
+.custom-navbar .navbar-nav > .active > a, 
+.custom-navbar .navbar-nav > .active > a:hover, 
+.custom-navbar .navbar-nav > .active > a:focus {
+  color: $primary-red;
+  background-color: $plain-background;
+  font-weight: 400;
+  
+}
