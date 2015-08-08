@@ -39,15 +39,16 @@
         </div>    
         <div class="col-md-10">
             <div class="col-md-12 animate-repeat" dir-paginate="course in courses.courses | coursefilter: courses.filter | itemsPerPage: 5 "> 
+              
               <div class="well course-tile">
                   <div class="media">
                       <div class="media-left course-thumbnail">
-                        <a href="#">
+                        <a href="#" ng-href="{{'/courses/' + course.code}}">
                           <img class="media-object" ng-src="{{ course.img }}" alt="...">
                         </a>
                       </div>
                       <div class="media-body">
-                        <h3 class="tile-title">{{course.name}}</h3>
+                        <a class="tile-title" href="" ng-href="{{'/courses/' + course.code}}">{{course.name}}</a>
                         <hr />
                         <p class="tile-description">{{course.desc}}</p>
                         
@@ -79,6 +80,7 @@
                   <span class="hours">1 HOUR</span>
                 </div>  -->
               </div>
+             
             </div>
             <div class="row text-center">
                 <dir-pagination-controls></dir-pagination-controls>

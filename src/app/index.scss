@@ -15,6 +15,7 @@ $icon-font-path: "../../bower_components/bootstrap-sass-official/assets/fonts/bo
 /* Variables */
 
 $primary-color: #333;
+$alt-text-color: #666;
 $plain-background: #F7F7F7;
 /* $primary-red: #C0392B; */
 $primary-red: #B41734;
@@ -30,6 +31,10 @@ body {
   min-height: 100%;
   color: $primary-color;
   background-color: $plain-background;
+}
+
+a {
+  text-decoration: none !important;
 }
 a:focus{
     outline:0; /*removes the dotted border*/

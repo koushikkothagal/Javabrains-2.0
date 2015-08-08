@@ -6,7 +6,7 @@
   font-weight: 400;
   letter-spacing: 0.2em;
   a {
-    text-decoration: none;
+    
     color:gray;
     &:hover {
       color: #C0392B;
@@ -38,6 +38,7 @@
   }
   p.tile-description {
     font-family: "PT Serif", serif;
+    color: $alt-text-color;
     font-size: 16px;
     max-width: 90%;
   }

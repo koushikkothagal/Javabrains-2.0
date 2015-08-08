@@ -4,6 +4,7 @@
 
   angular
     .module('javabrains')
+    .constant('REST_ROOT_URL', 'https://javabrains.koushik.org/api/');
 
 
 })();

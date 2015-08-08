@@ -14,13 +14,14 @@
       
       <div class="row">
         <div class="col-md-6 animate-repeat" ng-repeat="topic in topics.topics | filter: { tech: topics.filterValue }">
+            <a href="#" ng-href="{{'/courses?tag=' + topic.name}}">
           <div class="well topic-tile">
             <h3 class="tile-title">{{topic.name}}</h3>
             <hr />
             <p class="tile-description">{{topic.desc}}</p>
             
             <div class="labels">
-              <a href="#" ng-repeat="tag in topic.tags" class="label label-default">{{ tag }}</a>
+              <a href="#" ng-href="{{'/courses?tag=' + tag}} ng-repeat="tag in topic.tags" class="label label-default">{{ tag }}</a>
             </div>
             
         <div ng-if="topic.courses > 1" class="metadata">
@@ -36,6 +37,7 @@
               <span class="hours">1 HOUR</span>
             </div>  -->
           </div>
+            </a>
         </div>
       </div>
       
