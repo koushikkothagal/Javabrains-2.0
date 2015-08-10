@@ -8,14 +8,16 @@ hr.breadcrumbs-divider {
 .breadcrumb > li + li:before {
   padding: 0 5px;
   font-family: "Lato", sans-serif;
-  content: "/";
+  content: ">";
 }
 
 .custom-breadcrumb {
   margin-bottom: 0px;
   font-family: "Lato", sans-serif;
   font-size: 17px;
-  background-color: #F2F2F2;
+  border-bottom: 1px solid #777;
+  border-radius: 0;
+  /* background-color: #F2F2F2; */
 }
 
 .course-image {

@@ -14,7 +14,7 @@ gulp.task('inject', ['scripts', 'styles'], function () {
     path.join(conf.paths.tmp, '/serve/app/**/*.css'),
     path.join('!' + conf.paths.tmp, '/serve/app/vendor.css')
   ], { read: false });
-  console.log('*******************' + conf.paths.src);
+  
   var injectScripts = gulp.src([
     path.join(conf.paths.src, '/app/**/*.module.js'),
     path.join(conf.paths.src, '/app/**/*.js'),

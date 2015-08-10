@@ -29,8 +29,9 @@
       .state('course', {
         url: '/courses/:courseName',
         resolve: {
-          courseData:  function(REST_ROOT_URL, $http, $stateParams){
-            return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName);
+          courseData:  function(REST_ROOT_URL, $http, $stateParams, $q){
+            // return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName);
+            return $q.when({});
          },
         },
         templateUrl: '/app/coursedetail/coursedetail.html',
@@ -41,13 +42,26 @@
       .state('lesson', {
         url: '/courses/:courseName/lessons/:lessonName',
         resolve: {
-          courseData:  function(REST_ROOT_URL, $http, $stateParams){
-            return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName);
+          courseData:  function(REST_ROOT_URL, $http, $stateParams, $q){
+            // return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName);
+            return $q.when({});
          },
         },
-        templateUrl: '/app/coursedetail/coursedetail.html',
+        templateUrl: '/app/lessons/lessons.html',
         controller: 'LessonController',
         controllerAs: 'lesson',        
+      })
+      .state('lessonmodule', {
+        url: '/courses/:courseName/lessons/:lessonName/:moduleName',
+        resolve: {
+          courseData:  function(REST_ROOT_URL, $http, $stateParams, $q){
+            // return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName);
+            return $q.when({});
+         },
+        },
+        templateUrl: '/app/lesson-module/lesson-module.html',
+        controller: 'LessonModuleController',
+        controllerAs: 'lessonModule',        
       })
       ;
 

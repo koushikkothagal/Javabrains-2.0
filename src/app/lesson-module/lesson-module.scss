@@ -1,15 +1,3 @@
-.video-frame {
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-	@include desktop-large {
-		width: 58%;
-	}
-	@include desktop-xlarge {
-		width: 70.33333%;
-	}
-}
-
-	
-
 .lesson-details {
 	margin-top: 20px; 
 	@include desktop-large {
@@ -26,15 +14,4 @@
 		border-bottom: 1px solid #CCCCCC;	
 	}
 	
-}
-
-
-.video-block {
-	background-color: blue;
-	
-}
-
-.affix {
-	position: fixed;
-	top: 0; left: 0; right: 0;
 }
