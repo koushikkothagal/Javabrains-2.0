@@ -1,10 +1,14 @@
 .video-frame {
-	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+	
 	@include desktop-large {
 		width: 58%;
 	}
 	@include desktop-xlarge {
 		width: 70.33333%;
+	}
+	
+	.embed {
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
 	}
 }
 
@@ -23,7 +27,7 @@
 	position: relative;
    	height:150px;   /* Height of the footer */
 	.head-row {
-		border-bottom: 1px solid #CCCCCC;	
+			
 	}
 	
 }

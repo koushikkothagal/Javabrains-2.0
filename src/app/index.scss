@@ -99,6 +99,8 @@ input.combo:checked + label.combo {
   /* color: #C0392B; */
 }
 
+
+
 input.combo:checked + label.combo::before,
 input.check:checked + label.check::before {
   background-color: #34495e;
@@ -157,6 +159,10 @@ ul.pagination {
     background-color: #333;
     border-color: #333;
   }
+}
+
+.underline {
+  border-bottom: 1px solid #CCCCCC;
 }
 
 /* End common across pages */
