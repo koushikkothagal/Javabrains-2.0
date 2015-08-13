@@ -6,13 +6,13 @@
 		<div class="col-xs-12 col-sm-6 course-details">
 			<h1 class="course-title" itemprop="title" ng-bind="::course.info.name"></h1>
 			<span class="topic-name">
-				<a href="#" ng-bind="::course.topic.name" ng-href="/topics/{{::course.info.topic}}"></a>
+				<a href="#" ng-bind="::course.info.topicName" ng-href="/courses?tag={{::course.info.topicName}}"></a>
 			</span>
-			<p class="course-description" ng-bind="::course.info.description"></p>
+			<p class="course-description" ng-bind="::course.info.desc"></p>
 			<a id="start-course" class="btn" href="#">Start Course</a>
 			<p class="course-description">This course covers:</p>
-			<ul class="list-square">
-				<li ng-repeat="objective in ::course.info.objectives" ng-bind="::objective"></li>
+			<ul class="list-square fa-ul">
+				<li ng-repeat="objective in ::course.info.objectives"><i class="fa-li fa fa-check-square" style="color: #27ae60;"></i>{{::objective}}</li>
 			</ul>
 		</div>
 	</div>
@@ -22,21 +22,21 @@
 			<a href="/topics">Topics</a>
 		</li>
 		<li>
-			<a href="#" ng-bind="::course.topic.name" ng-href="/topics/{{::course.info.topic}}"></a>
+			<a href="#" ng-bind="::course.info.topicName" ng-href="/courses?tag={{::course.info.topicName}}"></a>
 		</li>
 	</ol>
 	<hr class="breadcrumbs-divider" />
 	
-	<div class="row" ng-repeat="unit in ::course.units">
+	<div class="row" ng-repeat="unit in ::course.info.units">
 		<a href="#">
 		<div class="media unit-tile">
 			<div class="media-left unit-block" ng-class="unit.slNo">
 				<p class="unit-text text-center"> UNIT</p> 
-			  	<p class="unit-number text-center" ng-bind="::unit.slNo"></p>  
+			  	<p class="unit-number text-center" ng-bind="::unit.unitNumber"></p>  
 			</div>
 			<div class="media-body unit-body">
-				<h4 class="media-heading unit-heading">Introduction</h4> <!-- TODO -->
-				<p class="unit-description" ng-bind="::unit.description">
+				<h4 class="media-heading unit-heading" ng-bind="::unit.unitName"></h4> <!-- TODO -->
+				<p class="unit-description" ng-bind="::unit.unitDescription">
 					
 				</p>
 				

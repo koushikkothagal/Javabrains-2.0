@@ -6,17 +6,16 @@
     .controller('CourseDetailController', CourseDetailController);
 
   /** @ngInject */
-  function CourseDetailController(courseData) {
-     this.info = courseData.data.course;
-     this.topic = courseData.data.topic;
-     this.units = courseData.data.units;
+  function CourseDetailController(courseData, courseDataService) {
+     this.info = courseData.data.data;
+     console.log(this.info);
      // Remove the first element of the array. Currently the API returns unit at index 0 as undefined.
-     this.units.splice(0, 1);
-     
+     // this.units.splice(0, 1);
+     this.info.topicName = _.findWhere(courseDataService.topics, {'id': this.info.topic}).name;
      this.info.imageUrl = 'http://javabrains.koushik.org/assets/images/' + this.info.code + '.jpg'
      
-     angular.forEach(this.units, function(unit) {
-       unit.slNo = '0' + unit.slNo; // Not planning to *ever* have > 10 units per course. Change this if that isn't true.
+     angular.forEach(this.info.units, function(unit) {
+       unit.unitNumber = '0' + unit.unitNumber; // Not planning to *ever* have > 10 units per course. Change this if that isn't true.
      })
   }
 })();

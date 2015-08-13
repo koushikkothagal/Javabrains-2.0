@@ -30,8 +30,9 @@
         url: '/courses/:courseName',
         resolve: {
           courseData:  function(REST_ROOT_URL, $http, $stateParams, $q){
-            // return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName);
-            return $q.when({});
+            return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName);
+            // return $http.get('https://api.parse.com/1/classes/CourseApi?where={"CourseName":"spring_data"}');
+            
          },
         },
         templateUrl: '/app/coursedetail/coursedetail.html',
@@ -42,9 +43,9 @@
       .state('lesson', {
         url: '/courses/:courseName/lessons/:lessonName',
         resolve: {
-          courseData:  function(REST_ROOT_URL, $http, $stateParams, $q){
-            // return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName);
-            return $q.when({});
+          lessonData:  function(REST_ROOT_URL, $http, $stateParams, $q){
+            return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName + '/lessons/' + $stateParams.lessonName);
+            
          },
         },
         templateUrl: '/app/lessons/lessons.html',
@@ -55,8 +56,9 @@
         url: '/courses/:courseName/lessons/:lessonName/:moduleName',
         resolve: {
           courseData:  function(REST_ROOT_URL, $http, $stateParams, $q){
-            // return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName);
-            return $q.when({});
+            return $http.get(REST_ROOT_URL + 'courses/' + $stateParams.courseName + '/lessons/' + $stateParams.lessonName + '/' + $stateParams.moduleName);
+            
+            
          },
         },
         templateUrl: '/app/lesson-module/lesson-module.html',

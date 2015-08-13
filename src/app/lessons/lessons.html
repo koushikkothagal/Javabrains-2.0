@@ -2,21 +2,21 @@
 <div class="row">
 	<div class="col-md-7 center-block video-frame" style="float:none;"> 
 	<div class="embed-responsive embed-responsive-16by9 embed">
-  		<iframe class="embed-responsive-item" src="//www.youtube.com/embed/AK6TulIASgQ?rel=0&showinfo=0"></iframe>
+  		<iframe class="embed-responsive-item" ng-src="{{lesson.info.youtube}}"></iframe>
 	</div>
 	</div>
 </div>
 </div>
 
 
-<div class="container-fluid lesson-details" id="lesson-details">
+<div class="container-fluid lesson-details video-page" id="lesson-details">
 		<div class="container">
 		<div class="row head-row">
 			<div class="col-md-8 underline">
 				<h1>
 					<i class="fa fa-chevron-circle-left" style="font-size: 20px;color: #CACACA; margin-right: 5px"></i>
 					<span style="font-size: 25px; font-weight: 700;color: #B41734; margin-right: 5px;">1.2</span>
-					<span>The Richardson Maturity Model</span>
+					<span>{{lesson.info.title}}</span>
 					<i class="fa fa-chevron-circle-right" style="font-size: 20px;color: #CACACA; margin-left: 5px;"></i>
 				</h1>
 			</div>
@@ -30,8 +30,7 @@
 				</div>
 			</div>
 		</div>
-		<p style="font-size: 18px; font-family: 'Lato'; margin-top: 15px; max-width: 70em;color: #64686a;">In this tutorial, we'll learn about the Richardson Maturity Model, a way for REST APIs to be classified, and the "RESTfulness"
-			of an API determined.</p>
+		<p style="font-size: 18px; font-family: 'Lato'; margin-top: 15px; max-width: 70em;color: #64686a;">{{lesson.info.description}}</p>
 		</div>
 	</div>
 	

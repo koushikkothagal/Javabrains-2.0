@@ -1,0 +1,28 @@
+<div class="container-fluid lesson-details" id="lesson-details">
+		<div class="container">
+		<div class="row head-row">
+			<div class="col-md-8 underline">
+				<h1>
+					<i class="fa fa-chevron-circle-left" style="font-size: 20px;color: #CACACA; margin-right: 5px"></i>
+					<span style="font-size: 25px; font-weight: 700;color: #B41734; margin-right: 5px;">1.2</span>
+					<span>{{ctrl.lesson.title}}</span>
+					<i class="fa fa-chevron-circle-right" style="font-size: 20px;color: #CACACA; margin-left: 5px;"></i>
+				</h1>
+			</div>
+			<div class="col-md-4 underline" style="position: relative;min-height: 70px;">
+				<div class="btn-group" role="group" aria-label="..." style="position: absolute; bottom: 0; right:0;">
+					<a type="button" ng-href="{{'http://localhost:3000/courses/javaee_jaxrs/lessons/introduction'}}" class="btn btn-default" style="border: none; background-color: #F7F7F7;">
+						<i class="fa fa-film"></i>
+					</a>
+					<a type="button" class="btn btn-default" 
+						style="border: none;background-color: #F7F7F7;color: #B41734;border-bottom: 3px solid #B41734;border-radius: 0;"
+						ng-repeat="section in this.lesson.sections">
+						{{ section.name }}
+						</a>
+					<a type="button" ng-href="{{'http://localhost:3000/courses/javaee_jaxrs/lessons/introduction/quiz'}}"  class="btn btn-default" style="border: none;background-color: #F7F7F7;">Challenges</a>
+				</div>
+			</div>
+		</div>
+		<p style="font-size: 18px; font-family: 'Lato'; margin-top: 15px; max-width: 70em;color: #64686a;">{{ctrl.lesson.description}}</p>
+		</div>
+	</div>
