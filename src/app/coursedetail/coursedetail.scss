@@ -35,15 +35,6 @@ hr.breadcrumbs-divider {
   margin-top: 0;
 }
 
-.topic-name a {
-  color: $primary-red;
-  font-size: 16px;
-  font-family: "Montserrat",sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  
-}
-
 .course-description, .unit-description {
   color: #64686A;
   margin-top: 20px;
@@ -106,6 +97,10 @@ hr.breadcrumbs-divider {
   background-color: #FFF; 
   margin-bottom: 20px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  .lessons {
+    color: $primary-red;
+    margin-top: 30px;
+  }
 }
 
 .unit-block {

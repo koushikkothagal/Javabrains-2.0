@@ -1,0 +1,53 @@
+.lesson-details {
+	// margin-top: 20px; 
+	@include desktop-large {
+		// margin-top: 50px;
+	}
+	@include desktop-xlarge {
+		// margin-top: 100px;
+	}
+	font-family: 'Lato';
+	width:100%;
+	position: relative;
+   	height:200px; 
+	
+	.arrow {
+		font-size: 20px;
+		color: #CACACA; 
+		margin-right: 5px
+	}
+	.slNo {
+		font-size: 25px; 
+		font-weight: 700;
+		color: #B41734; 
+		
+	}
+	.title {
+		margin-left: 5px;
+	}
+	.link-subtitle {
+		// margin-top: 20px;
+	}
+	.button-panel {
+		position: relative;
+		min-height: 70px;
+	}
+	.nav-button-group {
+		position: absolute; 
+		bottom: 0; 
+		right:0;
+		a {
+			border: none; 
+			background-color: #F7F7F7;
+			border-radius: 0;
+		}
+		a:hover {
+			color: $primary-red;
+		}	
+		a.selected {
+			color: #B41734;
+			border-bottom: 3px solid #B41734;
+		}
+	}
+	
+}

@@ -9,7 +9,10 @@
   function ManuscriptDirective() {
 	  
 	  return {
-		  templateUrl: '/app/lesson-module/manuscript/manuscript.html'
+		  templateUrl: '/app/lesson-module/manuscript/manuscript.html',
+      scope: {
+        'content': '='
+      }
 	  };
      
   }

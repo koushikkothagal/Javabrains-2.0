@@ -12,25 +12,6 @@
 	}
 }
 
-	
-
-.lesson-details.video-page {
-	margin-top: 20px; 
-	@include desktop-large {
-		margin-top: 50px;
-	}
-	@include desktop-xlarge {
-		margin-top: 100px;
-	}
-	font-family: 'Lato';
-	width:100%;
-	position: relative;
-   	height:150px;   /* Height of the footer */
-	.head-row {
-			
-	}
-	
-}
 
 
 .video-block {
