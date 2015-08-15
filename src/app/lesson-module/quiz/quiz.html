@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="quiz flex-row">
-      <ol class="lesson-quiz-tabs flex-column flex-row-md">
+      <ol class="question-tabs flex-column flex-row-md">
   		  <li class="quiz-tab col-grow-shrink flex-center" ng-repeat="q in ctrl.quiz.questions" id="quiz-question-tab-{{$index+1}}" ng-class="{'active' : (ctrl.activeQuestionIndex === $index),
                 'correct': ctrl.isAnswerCorrect(q),
                 'incorrect': ctrl.isAnswerIncorrect(q),}" ng-click="ctrl.activateQuestion($index)">
@@ -13,43 +13,48 @@
             </svg>
           </li>
       </ol>
-      <div class="yt-quiz-tabs pad-horizontal-long pad-top-long col-4-12 col-md-1">
-        <h2 class="yt-quiz-title gutter-bottom-heading">Exercise</h2>
-        <div class="yt-quiz-question-text-list">
-          <div class="yt-quiz-question-text yt-card-text" 
+      
+      <div class="quiz-tabs padded">
+        <h2 class="quiz-title">Exercise</h2>
+        <div class="quiz-question-text-list">
+          <div class="quiz-question-text card-text" 
                 ng-repeat="question in ctrl.quiz.questions" 
                 ng-bind-html="::question.description | trust_html" 
-                yt-translate-x="(-(ctrl.activeQuestionIndex * 100)) + '%'">
+                translate-x="(-(ctrl.activeQuestionIndex * 100)) + '%'">
                   
             </div>
         </div>
         
        
-      </div>
+      </div>    
       
       
       
       
       
-      <div class="yt-quiz-question-list separator-left">
+      <div class="quiz-question-list separator-left">
         
         <div ng-repeat="question in ctrl.quiz.questions" 
-            class="yt-quiz-question" 
-            yt-translate-x="(-(ctrl.activeQuestionIndex * 100)) + '%'" 
+            class="quiz-question" 
+            translate-x="(-(ctrl.activeQuestionIndex * 100)) + '%'" 
             ng-init="outer = $index; first = $first; last = $last;">
+            
             <div ng-repeat="answer in question.answers" class="pad-bottom-short">
                 <input class="combo" id="q{{outer}}a{{$index}}"  type="radio" ng-model="ctrl.userData.quizAnswers[question.id]" value="{{$index}}">
-                <label class="combo" for="q{{outer}}a{{$index}}" ng-bind-html="::answer.content | trust_html"></label><br/>
+                <label class="combo" for="q{{outer}}a{{$index}}" ng-bind-html="::answer.content | trust_html" style="max-width: 16px;"></label><br/>
+                
                 
             </div>
+            <div class="answer-area" style="min-height: 60px;">
             <div class="answer correct" ng-show="ctrl.isAnswerCorrect(question)">
-              <strong class="yt-quiz-correct-title" ng-bind="::question.correctAnswerMainTitle"></strong>
-		      <div class="yt-quiz-correct-description" ng-bind="::question.correctAnswerDescription"></div>
+              <strong class="quiz-correct-title" ng-bind="::question.correctAnswerMainTitle"></strong>
+		      <div class="quiz-correct-description" ng-bind="::question.correctAnswerDescription"></div>
             </div>
             <div class="answer incorrect" ng-show="ctrl.isAnswerIncorrect(question)"> 
-                <strong class="yt-quiz-incorrect-title" ng-bind="::question.incorrectAnswerMainTitle"></strong>
-				<div class="yt-quiz-incorrect-description" ng-bind="::question.incorrectAnswerDescription"></div>
+                <strong class="quiz-incorrect-title" ng-bind="::question.incorrectAnswerMainTitle"></strong>
+				<div class="quiz-incorrect-description" ng-bind="::question.incorrectAnswerDescription"></div>
 			</div>
+            </div>
             <div class="quiz-nav text-center">
                 <a ng-if="!first" class="btn" href="#" ng-click="ctrl.activateQuestion(outer - 1)">
                     <i class="fa fa-chevron-left"></i>
@@ -65,6 +70,6 @@
                 </a>
             </div>
         </div>
-      </div>
+      </div> 
 	</div>
 </div>

@@ -41,7 +41,7 @@
     flex: 1 1 auto;
 }
 
-.lesson-quiz-tabs {
+.question-tabs {
     margin: 0;
     padding: 0;
     max-width: 84px;
@@ -122,15 +122,17 @@
 /* End side tabs */
 
 
-.yt-quiz-tabs {
+.quiz-tabs {
     font-size: 21px;
     line-height: 26px;
     margin-bottom: 15px;
     flex: 0 0 33.33333%;
+    width: 40%;
+    max-width: 40%;
 }
 
 
-.yt-quiz-title {
+.quiz-title {
     font-size: 34px;
     font-weight: 300;
     line-height: 44px;
@@ -139,13 +141,13 @@
     font-family: "Montserrat", sans-serif;
 }
 
-.yt-quiz-question-text-list {
+.quiz-question-text-list {
     overflow: hidden;
     position: relative;
     white-space: nowrap;
 }
 
-.yt-quiz-question-text {
+.quiz-question-text {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
     -webkit-transition: ease 350ms;
@@ -168,17 +170,18 @@
 
 /* Start choices section */
 
-.yt-quiz-question-list {
+.quiz-question-list {
     overflow: hidden;
     position: relative;
     white-space: nowrap;
+    width: 50%;
 }
 
 .separator-left {
     border-left: 1px solid #d8d8d8;
 }
 
-.yt-quiz-question {
+.quiz-question {
     -webkit-transform: translateX(0%);
     transform: translateX(0%);
     -webkit-transition: ease 350ms;
@@ -193,12 +196,11 @@
     width: 100%;
 }
 
-.yt-quiz-question label {
+.quiz-question label {
     cursor: pointer;
     font-size: 15px;
     background-color: #fff;
     border-color: #fff;
-    
 }
 
 
@@ -208,7 +210,6 @@
 
 .correct {
     color: #27ae60;
-    
 }
 
 .incorrect {
