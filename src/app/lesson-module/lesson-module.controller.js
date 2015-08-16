@@ -6,10 +6,12 @@
     .controller('LessonModuleController', LessonModuleController);
 
   /** @ngInject */
-  function LessonModuleController($stateParams) {
+  function LessonModuleController(lessonData, $stateParams) {
      this.isText = $stateParams.moduleName === 'text';
      this.isQuiz = $stateParams.moduleName === 'quiz';
      
+     this.info = lessonData.data;
+     /*
      this.lesson = {
       "slNo": 1,
       "title": "Introduction",
@@ -177,12 +179,13 @@
         }
       ]
     };
+    */
     
     if (this.isText) {
-      this.content = getContent(this.lesson, 'text');
+      this.content = getContent(this.info, 'text');
     }
     if (this.isQuiz) {
-      this.content = getContent(this.lesson, 'quiz');
+      this.content = getContent(this.info, 'quiz');
     }
 
     function getContent(lesson, type) {

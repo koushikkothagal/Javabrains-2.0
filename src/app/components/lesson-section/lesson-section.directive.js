@@ -11,6 +11,9 @@
     return {
       templateUrl: '/app/components/lesson-section/lesson-section.html',
       controller: LessonSectionCtrl,
+      scope: {
+        'lesson': '='
+      },
       controllerAs: 'ctrl'
     };
 
@@ -18,8 +21,11 @@
 
 
 
-  function LessonSectionCtrl($location) {
-
+  function LessonSectionCtrl($scope, $location) {
+    
+    this.lesson = $scope.lesson;
+    
+/*
     this.lesson = {
       "slNo": 1,
       "title": "Introduction",
@@ -185,7 +191,7 @@
         }
       ]
     };
-
+*/
     prepareData(this.lesson, $location);
   }
 

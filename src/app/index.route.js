@@ -44,7 +44,7 @@
         url: '/courses/:courseName/lessons/:lessonName',
         resolve: {
           lessonData:  function(REST_ROOT_URL, $http, $stateParams, $q){
-            return $http.get('https://javabrains.koushik.org/api/courses/' + $stateParams.courseName + '/lessons/' + $stateParams.lessonName, 
+            return $http.get('https://javabrains-data.parseapp.com/courses/' + $stateParams.courseName + '/lessons/' + $stateParams.lessonName, 
               {
                 cache: true
               }
@@ -59,8 +59,8 @@
       .state('lessonmodule', {
         url: '/courses/:courseName/lessons/:lessonName/:moduleName',
         resolve: {
-          courseData:  function(REST_ROOT_URL, $http, $stateParams, $q){
-            return $http.get('https://javabrains.koushik.org/api/courses/' + $stateParams.courseName + '/lessons/' + $stateParams.lessonName + '/' + $stateParams.moduleName,
+          lessonData:  function(REST_ROOT_URL, $http, $stateParams, $q){
+            return $http.get('https://javabrains-data.parseapp.com/courses/' + $stateParams.courseName + '/lessons/' + $stateParams.lessonName,
               {
                 cache: true
               });
