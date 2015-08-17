@@ -23,7 +23,9 @@
   
   function QuizModuleCtrl($scope) {
   
-  this.quiz = $scope.content;
+  this.quiz = {
+    'questions': $scope.content
+  };
   this.quizStarted = true;
   this.showTabs = true;
   this.userData = {
@@ -41,12 +43,12 @@
   
   this.isAnswerCorrect = function(question) {
     var answer = this.userData.quizAnswers[question.id];
-    return null != answer && answer == question.correctAnswer - 1;
+    return null != answer && answer == question.correctAnswer;
   };
   
   this.isAnswerIncorrect = function(question) {
       var answer = this.userData.quizAnswers[question.id];
-      return null != answer && answer != question.correctAnswer - 1;
+      return null != answer && answer != question.correctAnswer;
   };
 
   

@@ -1,67 +1,117 @@
 <!doctype html>
 <html ng-app="javabrains">
-  <head>
-    <meta charset="utf-8">
-    <title>javabrains</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <link href='//fonts.googleapis.com/css?family=Lato:400,700,300|Josefin+Sans:400,700|PT+Sans:400,700|Montserrat|Lora:400,700' rel='stylesheet' type='text/css'>
-    <link href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
-     
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/angular-animate/angular-animate.js"></script>
-    <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="/bower_components/angular-touch/angular-touch.js"></script>
-    <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="/bower_components/lodash/lodash.js"></script>
-    <script src="/bower_components/angular-utils-pagination/dirPagination.js"></script>
-     <script src="/bower_components/ngScrollSpy/dist/ngScrollSpy.js"></script>
-    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
 
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
-    <!-- inject:css -->
-    <!-- css files will be automatically insert here -->
-    <!-- endinject -->
-    <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 10]>
+<head>
+  <meta charset="utf-8">
+  <title>javabrains</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link href='//fonts.googleapis.com/css?family=Lato:400,700,300|Josefin+Sans:400,700|PT+Sans:400,700|Montserrat|Lora:400,700'
+  rel='stylesheet' type='text/css'>
+  <link href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="/bower_components/angular-touch/angular-touch.js"></script>
+  <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="/bower_components/lodash/lodash.js"></script>
+  <script src="/bower_components/angular-utils-pagination/dirPagination.js"></script>
+  <script src="/bower_components/ngScrollSpy/dist/ngScrollSpy.js"></script>
+  <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,src}) styles/app.css -->
+  <!-- inject:css -->
+  <!-- css files will be automatically insert here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Start menu -->
-      <div class="container-fluid" style="margin-left: 80px; margin-right: 80px;">    
-        <div class="row">
-          <navbar />
+  <!-- Start menu -->
+  <div class="container-fluid" style="margin-left: 30px; margin-right: 30px;">
+    <div class="row">
+      <navbar />
+    </div>
+  </div>
+  <!-- End menu -->
+
+  <div ui-view></div>
+
+  <hr class="separator" />
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 social">
+          <div class="padded">
+            <span class="connect">Stay Connected </span>
+            <ul>
+              <li>
+                <a href="http://www.linkedin.com/in/koushiksrinivas" class="fa-icon fa fa-linkedin" target="_blank"></a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/javabrains" class="fa-icon fa fa-facebook" target="_blank"></a>
+              </li>
+              <li>
+                <a href="http://www.youtube.com/koushks" class="fa-icon fa fa-youtube" target="_blank"></a>
+              </li>
+              <li>
+                <a href="https://plus.google.com/101241060481722039118/posts" class="fa-icon fa fa-google-plus" target="_blank"></a>
+              </li>
+              <li>
+                <a href="https://github.com/koushikkothagal" class="fa-icon fa fa-github" target="_blank"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 text-right">
+          <div class="padded">
+            <div class="row">
+              <span id="copyright">Site and content designed and developed by Koushik Kothagal. </span>
+            </div>
+            <div class="row">
+              <p class="footer-text" id="license">
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a>
+                <br><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Java Brains</span> by <a xmlns:cc="http://creativecommons.org/ns#"
+                href="http://koushik.org" property="cc:attributionName" rel="cc:attributionURL">Koushik Kothagal</a> is licensed
+                under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+            </div>
+          </div>
         </div>
       </div>
-    <!-- End menu -->
-      
-    <div ui-view></div>
+    </div>
+  </footer>
 
-    <!-- build:js(src) scripts/vendor.js -->
-    <!-- bower:js -->
-    <!-- run `gulp inject` to automatically populate bower script dependencies -->
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- run `gulp inject` to automatically populate bower script dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
-    <!-- inject:js -->
-    <!-- js files will be automatically insert here -->
-    <!-- endinject -->
+  <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- js files will be automatically insert here -->
+  <!-- endinject -->
 
-    <!-- inject:partials -->
-    <!-- angular templates will be automatically converted in js and inserted here -->
-    <!-- endinject -->
-    <!-- endbuild -->
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
 
-  </body>
+
+</body>
+
 </html>

@@ -21,10 +21,20 @@
     return directive;
 
     /** @ngInject */
-    function NavbarController() {
+    function NavbarController($location, $rootScope) {
       var vm = this;
-      // console.log($location.path());
-
+      vm.currentUrl = $location.path();
+      console.log($location.path());
+      vm.isCoursesUrl = $location.path().startsWith('/courses');
+      vm.isTopicsUrl = $location.path().startsWith('/topics');
+      vm.isAboutUrl = $location.path().startsWith('/about');
+      $rootScope.$on('$stateChangeSuccess', 
+        function(event, toState, toParams, fromState, fromParams){
+          vm.currentUrl = $location.path(); 
+          vm.isCoursesUrl = $location.path().startsWith('/courses');
+          vm.isTopicsUrl = $location.path().startsWith('/topics');
+          vm.isAboutUrl = $location.path().startsWith('/about');
+        });
       
     }
   }

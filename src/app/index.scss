@@ -156,6 +156,9 @@ input.check:checked + label.check::before {
   color: $primary-red;
   font-size: 53px;
   font-weight: 700;
+  @media (max-width: 1600px) {
+    margin-top: 20px;
+  }
 }
 
 ul.pagination {
@@ -187,7 +190,89 @@ ul.pagination {
 
 /* End common across pages */
 
+/* Footer */
+.social {
+    margin: 0;
+    padding: 0;
+}
 
+.social ul {
+    margin: 0;
+    padding: 5px;
+}
+
+.social ul li {
+    margin: 5px;
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    color: #FFF;
+    background-color: #909AA0;
+    font-size: 22px;
+    text-align:center;
+    padding-top: 12px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+}
+
+.social a:hover {
+    color: #FFF;
+    text-decoration: none;
+    transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+}
+
+.social .fa-facebook:hover { /* round facebook icon*/
+    background: #4060A5;
+}
+
+.social .fa-twitter:hover { /* round twitter icon*/
+    background: #00ABE3;
+}
+
+.social .fa-google-plus:hover { /* round google plus icon*/
+    background: #e64522;
+}
+
+.social .fa-github:hover { /* round github icon*/
+    background: #343434;
+}
+
+.social .fa-linkedin:hover { /* round linkedin icon*/
+    background: #0094BC;
+}
+
+.social .fa-youtube:hover { /* round youtube icon*/
+    background: #FF1F25;
+}
+
+footer {
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  color: #999;
+  padding: 20px;
+}
+
+.connect {
+  
+  margin-left: 15px;
+}
+
+/* Footer */
 
 
 
