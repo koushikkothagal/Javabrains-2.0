@@ -38,9 +38,9 @@ hr.breadcrumbs-divider {
 .course-description, .unit-description {
   color: #64686A;
   margin-top: 20px;
-  line-height: 1.8;
+  line-height: 1.7;
   font-family: "Lato", sans-serif;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 #start-course {
@@ -51,7 +51,7 @@ hr.breadcrumbs-divider {
   font-family: "Josefin Sans", sans-serif;
   font-size: 23px;
   letter-spacing: 1px;
-  margin: 35px auto 20px;
+  margin: 20px auto 10px;
   &:hover {
     background: #5f6c6d none repeat scroll 0% 0%;
     color: #FFF;
@@ -66,12 +66,11 @@ hr.breadcrumbs-divider {
 }
 
 .list-square li{
-	margin-bottom:17px;
-	
+	margin-bottom:16px;
 	position:relative;
 	color:#64686a;
   font-family: "Lato", sans-serif;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 /* End list */
@@ -87,9 +86,10 @@ hr.breadcrumbs-divider {
 
 .unit-heading {
   
-  font-size: 25px;
+  font-size: 22px;
   color: $primary-red;
   font-weight: 600;
+  font-family: "Montserrat", sans-serif;
 }
 
 .unit-tile {
