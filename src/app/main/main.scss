@@ -18,7 +18,7 @@ hr.separator {
   }
   
 hr.heading-separator {
-  max-width: 70%;
+  max-width: 60%;
   margin-left: 0px;
   margin-top: 50px;
 }  
@@ -46,7 +46,7 @@ hr.heading-separator {
 .topic-list {
   
   li {
-    width: 19%;
+    width: 20%;
     margin-top: 10px;
   }
   
@@ -65,3 +65,8 @@ hr.heading-separator {
 
 /* End Topic section */
 
+.about p {
+  
+  color: #666; 
+  font-size: 21px; 
+}

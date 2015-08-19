@@ -72,6 +72,11 @@
         controller: 'LessonModuleController',
         controllerAs: 'lessonModule',        
       })
+      .state('about', {
+        url: '/about',
+        templateUrl: '/app/about.html'
+      })
+      
       ;
 
     $urlRouterProvider.otherwise('/');

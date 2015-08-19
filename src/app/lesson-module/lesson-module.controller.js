@@ -7,7 +7,7 @@
 
   /** @ngInject */
   function LessonModuleController(lessonData, $stateParams) {
-     this.isText = $stateParams.moduleName === 'text';
+     this.isText = $stateParams.moduleName !== 'exercise';
      this.isQuiz = $stateParams.moduleName === 'exercise';
      
      this.info = lessonData.data;
@@ -181,12 +181,7 @@
     };
     */
     
-    if (this.isText) {
-      this.content = getContent(this.info, 'text');
-    }
-    if (this.isQuiz) {
-      this.content = getContent(this.info, 'exercise');
-    }
+    this.content = getContent(this.info, $stateParams.moduleName);
 
     function getContent(lesson, type) {
       var content;
