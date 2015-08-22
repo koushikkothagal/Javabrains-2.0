@@ -53,7 +53,11 @@
                         <p class="tile-description">{{course.desc}}</p>
                         
                         <div class="labels">
-                          <a href="#" ui-sref="courses({'tag': tag})" ng-repeat="tag in course.tags" class="label label-default">{{ tag }}</a>
+<!--                          <a href="#" ui-sref="courses({'tag': tag})" ng-repeat="tag in course.tags" class="label label-default"> -->
+                        <span ng-repeat="tag in course.tags" class="label label-default" style="margin: 3px"> 
+                              {{ tag }}
+                        </span>      
+<!--                          </a> -->
                           
                         </div>
                       </div>
