@@ -1,0 +1,81 @@
+.lesson-menu {
+    background-color: #3498DB;
+    color: #FFF;
+    padding-bottom: 20px;
+}
+.lessons-container {
+    margin-top: 10px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    // -webkit-justify-content: flex-start;
+    -ms-flex-pack: justify;
+    // justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    
+    
+    }
+
+.lesson-item {
+    // -webkit-order: 0;
+    // -ms-flex-order: 0;
+    // order: 0;
+    -webkit-flex: 0 1 33%;
+    -ms-flex: 0 1 33%;
+    flex: 0 1 33%;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+    border: 1px solid white;
+    background-color: #71B7E6; 
+    color: #FFF;
+    border-radius: 0 !important;
+    width: 30px;
+    height: 120px;
+    
+    
+    }
+    
+.lesson-menu.unit1 {
+		background-color: $unit1-dark;
+        .lesson-item {
+            background-color: $unit1-light;
+            &.done {
+                background-color: $unit1-dark;  
+            }
+        }
+		
+	}
+	
+	.lesson-menu.unit2 {
+		background-color: $unit2-dark;
+        .lesson-item {
+            background-color: $unit2-light;
+            &.done {
+                background-color: $unit2-dark;
+            }
+        }
+		
+	}
+	
+	.lesson-menu.unit3 {
+		background-color: $unit3-dark;
+        .lesson-item {
+            background-color: $unit3-light;
+            &.done {
+                background-color: $unit3-dark;  
+            }
+        }
+		
+	}    

@@ -4,9 +4,16 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 	<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
       </button>
-      <a href="/" class="navbar-brand" ng-if="vm.currentUrl !== '/'">
+      <!-- <a href="/" class="navbar-brand" ng-if="vm.currentUrl !== '/'">
       <span style="font-family: 'Monaco';">java<span style="color: #333333"  >Brains</span>
-      </a>
+      </a> -->
+      <ol class="breadcrumb">
+        <li><a href="/" class="" ng-if="vm.currentUrl !== '/'">
+          <img src="/assets/images/javabrains.png" style="width:100px; margin-top: -3px">
+      </a></li>
+        <li><a href="#">JAVA EE</a></li>
+        <li><a href="#">DEVELOPING REST APIS WITH JAX-RS</a></li>
+      </ol>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">

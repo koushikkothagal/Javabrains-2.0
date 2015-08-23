@@ -52,7 +52,7 @@
     this.topicChanged = function(ev) {
       
       if (ev.target.tagName === 'INPUT') {
-        console.log("Val: " + ev.target.id);  
+          
         if (ev.target.id === 'all') {
           this.filter.tags = {
             'All': 'All'

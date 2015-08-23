@@ -26,7 +26,6 @@
   this.quiz = {
     'questions': $scope.content
   };
-  console.log(this.quiz.questions);
   this.quizStarted = true;
   this.showTabs = true;
   this.userData = {

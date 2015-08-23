@@ -1,0 +1,19 @@
+<div class="container-fluid lesson-menu unit{{unit.unitNumber}}"  ng-repeat="unit in ctrl.course.units" ng-if="showLessonsFor === unit.unitNumber">
+  <!-- ng-if="ctrl.showLessonsFor === unit.unitNumber" -->
+  
+  <div class="container">
+    <div class="row">
+      <h1>Unit {{$index + 1}}</h1><p ng-bind="::unit.unitName"></p>
+    </div>
+    <div class="row">
+      <div class="lessons-container">
+        <div href="#" class="lesson-item list-group-item" ng-repeat="lesson in unit.lessons">
+          <h4 class="list-group-item-heading">Lesson {{$index + 1}}</h4>
+          <p class="list-group-item-text">{{ lesson.title }}</p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

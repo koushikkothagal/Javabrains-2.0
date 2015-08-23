@@ -8,7 +8,6 @@
   /** @ngInject */
   function CourseDetailController(courseData, courseDataService) {
      this.info = courseData.data;
-     console.log(courseData);
      // Remove the first element of the array. Currently the API returns unit at index 0 as undefined.
      // this.units.splice(0, 1);
      this.info.topicName = _.findWhere(courseDataService.topics, {'id': this.info.topic}).name;

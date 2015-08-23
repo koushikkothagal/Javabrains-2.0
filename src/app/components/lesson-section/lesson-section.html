@@ -1,8 +1,30 @@
 <div class="container-fluid lesson-details" id="lesson-details">
-		<div class="container">
-		<div class="row head-row">
-			<div class="col-md-8 underline">
-				<h1>
+	<div class="course-nav">
+		<!-- <div class="unit-item" ng-repeat="unit in ctrl.course.units" style="flex-grow: {{$index}}"> -->
+			<div id ="{{lesson.name}}"  class="lesson-item {{'unit' + lesson.unitNumber}}"  ng-repeat="lesson in ctrl.allLessons"
+				ng-class="{ 'done': lesson.done && !lesson.current}" ng-click="ctrl.showOrHideLessons(lesson.unitNumber)">
+				<i ng-if="lesson.current" class="fa fa-compass" style="margin-top: -10px;"></i>
+			</div>
+		
+		
+	</div>
+	
+	
+	<div width="100%" collapse="!ctrl.showLessons.enablePanel">
+		<lesson-timeline course="ctrl.course" show-lessons-for="ctrl.showLessons.unit"></lesson-timeline> 
+	</div>
+	
+
+<!--		<div class="lesson-item">
+			<i class="fa fa-compass" style="margin-top: -10px;"></i>
+		</div>
+-->
+
+
+<div class="container">
+	<div class="row head-row">
+		<div class="col-md-8 underline">
+			<h1>
 					<a ng-if="ctrl.lesson.prevLessonPermalinkName" ng-href="{{ctrl.lesson.prevLessonPermalinkName}}">
 						<i class="fa fa-chevron-circle-left arrow"></i>
 					</a>
@@ -12,40 +34,31 @@
 						<i class="fa fa-chevron-circle-right arrow"></i>
 					</a>
 				</h1>
-			</div>
-			<div class="col-md-4 button-panel underline">
-				<div class="btn-group nav-button-group" role="group">
-					<a type="button" 
-						ng-href="{{ctrl.lesson.url}}" 
-						class="btn btn-default"
-						ng-class="{selected: ctrl.lesson.isSelected}">
-							<i class="fa fa-film"></i>
-					</a>
-					<a type="button" 
-						class="btn btn-default" 
-						ng-repeat="section in ctrl.lesson.sections"
-						ng-href="{{section.url}}" 
-						ng-class="{selected: section.isSelected}"
-						>
+		</div>
+		<div class="col-md-4 button-panel underline">
+			<div class="btn-group nav-button-group" role="group">
+				<a type="button" ng-href="{{ctrl.lesson.url}}" class="btn btn-default" ng-class="{selected: ctrl.lesson.isSelected}">
+					<i class="fa fa-film"></i>
+				</a>
+				<a type="button" class="btn btn-default" ng-repeat="section in ctrl.lesson.sections" ng-href="{{section.url}}" ng-class="{selected: section.isSelected}">
 						{{ section.name }}
 						</a>
-					<!-- <a type="button" ng-href="{{'http://localhost:3000/courses/javaee_jaxrs/lessons/introduction/quiz'}}"  class="btn btn-default" style="border: none;background-color: #F7F7F7;">Challenges</a> -->
-				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-8 padded" style="padding-left: 45px; padding-top: 10px; border-right: 1px solid #aaa;">
-				<p class="link-subtitle">
-					<a href="#" ng-bind="::ctrl.lesson.courseName" ng-href="/courses/{{::ctrl.lesson.courseCode}}"></a>
-				</p>
-				<p style="font-size: 17px; font-family: 'Lato'; margin-top: 10px; color: #64686a;">{{ctrl.lesson.description}}</p>
-			</div>
-			<!--
+	</div>
+	<div class="row">
+		<div class="col-md-8 padded" style="padding-left: 45px; padding-top: 10px; border-right: 1px solid #aaa;">
+			<p class="link-subtitle">
+				<a href="#" ng-bind="::ctrl.lesson.courseName" ng-href="/courses/{{::ctrl.lesson.courseCode}}"></a>
+			</p>
+			<p style="font-size: 17px; font-family: 'Lato'; margin-top: 10px; color: #64686a;">{{ctrl.lesson.description}}</p>
+		</div>
+		<!--
 			<div class="col-md-4 padded" >
 				<p style="font-size: 18px; font-family: 'Lato';  color: #64686a;">Sign in to save your progress</p>
 			</div>
 			-->
-		</div>
-		</div>
-		
 	</div>
+</div>
+
+</div>

@@ -38,15 +38,102 @@
 		right:0;
 		a {
 			border: none; 
-			background-color: #F7F7F7;
+			// background-color: #F7F7F7;
 			border-radius: 0;
 		}
 		a:hover {
 			color: $primary-red;
+			background-color: #F7F7F7;
 		}	
 		a.selected {
 			color: #B41734;
 			border-bottom: 3px solid #B41734;
+		}
+	}
+	
+}
+
+.course-nav {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+	min-height: 10px;
+	background-color: #EEE;
+	
+	.unit-item {
+	height: 10px;
+	width: 100%;
+	display: flex;
+	border: 1px solid white;
+	
+	&:hover {
+		// height: 15px;
+		cursor: pointer;
+		.lesson-item {
+			// height: 15px;
+		}
+		
+	}
+	}
+
+	.lesson-item {
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+	
+	height: 10px;
+	width: 100%;
+	}
+	
+	.lesson-item.unit1 {
+		background-color: rgba(52, 152, 219,0.5);
+		&.done {
+			background-color: rgba(52, 152, 219,1.0);
+		}
+		i {
+			font-size:30px;
+			color: rgba(52, 152, 219,1.0);
+			
+		}
+	}
+	
+	.lesson-item.unit2 {
+		background-color: rgba(22, 160, 133,0.5);
+		&.done {
+			background-color: rgba(22, 160, 133,1.0);
+		}
+		i {
+			font-size:30px;
+			color: rgba(22, 160, 133,1.0);
+			
+		}
+	}
+	
+	.lesson-item.unit3 {
+		background-color: rgba(231, 76, 60,0.5);
+		&.done {
+			background-color: rgba(231, 76, 60,1.0);
+		}
+		i {
+			font-size:30px;
+			color: rgba(231, 76, 60,1.0);
+			
 		}
 	}
 	

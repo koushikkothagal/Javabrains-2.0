@@ -13,9 +13,7 @@
     "animate.css": "~3.3.0",
     "angular": "~1.4.0",
     "lodash": "~3.10.1",
-    "angular-utils-pagination": "~0.8.3",
-    "fontawesome": "~4.4.0",
-    "ngScrollSpy": "~1.0.6"
+    "angular-utils-pagination": "~0.8.3"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.0"

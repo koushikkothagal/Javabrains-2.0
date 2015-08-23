@@ -24,7 +24,6 @@
     function NavbarController($location, $rootScope) {
       var vm = this;
       vm.currentUrl = $location.path();
-      console.log($location.path());
       vm.isCoursesUrl = $location.path().startsWith('/courses');
       vm.isTopicsUrl = $location.path().startsWith('/topics');
       vm.isAboutUrl = $location.path().startsWith('/about');

@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.5.0"
+  },
+  "applications": {
+    "_default": {
+      "link": "jbdev"
+    },
+    "jbdev": {
+      "applicationId": "7Nvo8ibIrET4RykloaPiMOrPmVKeL3RYjwVALs4l",
+      "masterKey": "soPs3u8F01N40TSFcoIGDu1q4zRWd0dktlNIS6Mw"
+    }
+  }
+}
