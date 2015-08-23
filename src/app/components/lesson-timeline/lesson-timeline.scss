@@ -2,7 +2,52 @@
     background-color: #3498DB;
     color: #FFF;
     padding-bottom: 20px;
+    overflow: scroll;
+    min-height: 50%;
+/*    transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+    & .ng-enter {
+        transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+    }
+*/
 }
+/*
+.lesson-menu.ng-enter, .lesson-menu.ng-leave {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.lesson-menu.ng-enter,
+.lesson-menu.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.lesson-menu.ng-leave,
+.lesson-menu.ng-enter.ng-enter-active {
+  opacity:1;
+}
+*/
+/*
+.fadein,
+.fadeout {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.fadein.ng-hide-remove,
+.fadeout.ng-hide-add.ng-hide-add-active, .fadeout.ng-leave {
+  opacity: 0;
+  display: block !important;
+}
+
+.fadeout.ng-hide-add,
+.fadein.ng-hide-remove.ng-hide-remove-active, .fadeout.ng-enter {
+  opacity: 1;
+  display: block !important;
+}
+
+*/
+
 .lessons-container {
     margin-top: 10px;
     display: -ms-flexbox;
@@ -23,6 +68,8 @@
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    
+    
     
     
     }
@@ -78,4 +125,41 @@
             }
         }
 		
-	}    
+	} 
+    
+    .lesson-menu.unit4 {
+		background-color: $unit4-dark;
+        .lesson-item {
+            background-color: $unit4-light;
+            &.done {
+                background-color: $unit4-dark;  
+            }
+        }
+		
+	}      
+
+.lesson-list {
+    margin-top: 20px;
+    columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  font-size: 16px;
+  li {
+    padding-bottom: 10px;    
+  }
+  a {
+      color: #FFF;
+  }
+  height: 200px;
+  
+  
+}
+
+
+// Overrides for carousel
+
+.carousel-control.left, .carousel-control.right {
+    background: none;
+    cursor: pointer;
+    
+}

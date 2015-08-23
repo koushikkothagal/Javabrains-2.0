@@ -29,6 +29,10 @@ $unit2-light: #45B39D;
 $unit3-dark: #e74c3c;
 $unit3-light: #EC7063;
 
+$unit4-dark: #34495e;
+$unit4-light: #71808E;
+
+
 
 
 html {
@@ -198,6 +202,9 @@ ul.pagination {
   padding: 20px;
 }
 
+.clickable {
+  cursor: pointer;
+}
 
 /* End common across pages */
 
