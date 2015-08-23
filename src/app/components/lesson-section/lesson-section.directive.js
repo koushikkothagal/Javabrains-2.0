@@ -59,6 +59,8 @@
     vm.showOrHideLessons = function (unitNumber) {
       vm.showLessons.enablePanel = !vm.showLessons.enablePanel;
       vm.showLessons.unit = unitNumber;
+      
+      
       /*
       if (vm.showLessons.unit === unitNumber) {
         vm.showLessons.enablePanel = false;

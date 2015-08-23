@@ -1,6 +1,6 @@
 <!-- <div ng-if="showLessonsFor === unit.unitNumber"> -->
 <carousel interval="0" no-wrap="true">
-  <slide ng-repeat="unit in ctrl.course.units" class="lesson-menu unit{{unit.unitNumber}}"> <!-- active="showLessons.unit === unit.unitNumber" --> 
+  <slide ng-repeat="unit in ctrl.course.units" class="lesson-menu unit{{unit.unitNumber}}" active="unit.active"> 
 
     <div class="container text-left" style="max-width: 1000px;">
       <i class="fa fa-times clickable pull-right" style="font-size: 30px;margin:20px;" ng-click="showLessons.enablePanel = false"></i>
